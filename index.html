@@ -2,18 +2,350 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Donait Help End</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0;font-family:Arial,sans-serif}
-body{background:#f5f7fb;color:#111827}
-header{background:#101827;color:white;text-align:center;padding:24px 15px}
-header h1{font-size:30px}
-header p{margin-top:6px;color:#cbd5e1}
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial,sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#111827;
+}
+
+header{
+  background:#101827;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+
+header h1{
+  font-size:30px;
+}
+
+header p{
+  margin-top:7px;
+  color:#cbd5e1;
+}
 
 .hero{
-background:linear-gradient(135deg,#101827,#26364d);
-color:white;text-align:center;padding:55px 20px
+  background:linear-gradient(135deg,#101827,#26364d);
+  color:white;
+  text-align:center;
+  padding:55px 20px;
 }
-.
+
+.heart{
+  font-size:55px;
+  margin-bottom:15px;
+}
+
+.hero h2{
+  font-size:30px;
+  line-height:1.35;
+  margin-bottom:15px;
+}
+
+.hero p{
+  max-width:650px;
+  margin:auto;
+  line-height:1.7;
+  color:#e5e7eb;
+}
+
+.container{
+  max-width:700px;
+  margin:30px auto;
+  padding:0 16px;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  padding:25px 20px;
+  margin-bottom:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.07);
+}
+
+.card h3{
+  font-size:23px;
+  margin-bottom:14px;
+}
+
+.card p{
+  color:#4b5563;
+  line-height:1.7;
+}
+
+.causes{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+.cause{
+  background:#f8fafc;
+  padding:18px 10px;
+  border-radius:13px;
+  text-align:center;
+}
+
+.cause strong{
+  display:block;
+  margin-top:7px;
+}
+
+.donate{
+  text-align:center;
+}
+
+.upi{
+  background:#f1f5f9;
+  padding:16px;
+  border-radius:12px;
+  margin:18px 0;
+  font-weight:bold;
+  font-size:17px;
+  word-break:break-all;
+}
+
+.amounts{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  margin:20px 0;
+}
+
+.amount{
+  width:130px;
+  padding:16px;
+  border:0;
+  border-radius:14px;
+  background:#16a34a;
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.amount:active{
+  transform:scale(.96);
+}
+
+.copy{
+  padding:13px 20px;
+  border:0;
+  border-radius:12px;
+  background:#111827;
+  color:white;
+  font-size:16px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+footer{
+  background:#101827;
+  color:#cbd5e1;
+  text-align:center;
+  padding:25px 15px;
+  line-height:1.7;
+}
+
+@media(max-width:500px){
+  .hero h2{
+    font-size:26px;
+  }
+
+  .causes{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>Donait Help End</h1>
+  <p>Help • Hope • Humanity</p>
+</header>
+
+<section class="hero">
+
+  <div class="heart">❤️</div>
+
+  <h2>
+    Aapki Chhoti Si Madad,<br>
+    Kisi Ke Liye Badi Umeed
+  </h2>
+
+  <p>
+    Aap apni capacity ke according ₹50 ya ₹100 ka
+    contribution karke support kar sakte hain.
+  </p>
+
+</section>
+
+<main class="container">
+
+<section class="card">
+
+  <h3>🤝 Hamara Purpose</h3>
+
+  <p>
+    Donait Help End ka purpose zaruratmand logon ke liye
+    food, education, medical assistance aur basic
+    necessities jaise areas mein support provide karne
+    ki koshish karna hai.
+  </p>
+
+</section>
+
+
+<section class="card">
+
+  <h3>❤️ Help Areas</h3>
+
+  <div class="causes">
+
+    <div class="cause">
+      🍚
+      <strong>Food Support</strong>
+      <span>Food aur ration assistance</span>
+    </div>
+
+    <div class="cause">
+      📚
+      <strong>Education</strong>
+      <span>Books aur learning support</span>
+    </div>
+
+    <div class="cause">
+      🏥
+      <strong>Medical Help</strong>
+      <span>Medical assistance</span>
+    </div>
+
+    <div class="cause">
+      🧥
+      <strong>Basic Needs</strong>
+      <span>Essential items support</span>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="card donate">
+
+  <h3>💝 Donate via UPI</h3>
+
+  <p>
+    ₹50 ya ₹100 mein se koi amount choose karein.
+    Button par tap karte hi UPI payment open hoga.
+  </p>
+
+  <div class="upi">
+    jhaa50183-1@okaxis
+  </div>
+
+  <div class="amounts">
+
+    <button class="amount" onclick="pay(50)">
+      ₹50
+    </button>
+
+    <button class="amount" onclick="pay(100)">
+      ₹100
+    </button>
+
+  </div>
+
+  <button class="copy" onclick="copyUPI()">
+    📋 Copy UPI ID
+  </button>
+
+  <p style="font-size:13px;margin-top:15px;color:#6b7280;">
+    Payment karne se pehle UPI recipient details verify karein.
+  </p>
+
+</section>
+
+
+<section class="card">
+
+  <h3>🙏 Thank You</h3>
+
+  <p>
+    Aapka contribution kisi zaruratmand vyakti ki madad
+    ke efforts ka hissa ban sakta hai. Aap apni capacity
+    ke according hi donate karein.
+  </p>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <strong>Donait Help End</strong>
+
+  <br>
+
+  Help • Hope • Humanity
+
+  <br><br>
+
+  Please verify donation details before making any payment.
+
+</footer>
+
+
+<script>
+
+const UPI_ID = "jhaa50183-1@okaxis";
+const NAME = "Donait Help End";
+
+function pay(amount){
+
+  const upiLink =
+    "upi://pay" +
+    "?pa=" + encodeURIComponent(UPI_ID) +
+    "&pn=" + encodeURIComponent(NAME) +
+    "&am=" + encodeURIComponent(amount) +
+    "&cu=INR";
+
+  window.location.href = upiLink;
+}
+
+function copyUPI(){
+
+  if(navigator.clipboard){
+
+    navigator.clipboard.writeText(UPI_ID)
+    .then(function(){
+      alert("UPI ID copied!");
+    })
+    .catch(function(){
+      alert("UPI ID: " + UPI_ID);
+    });
+
+  }else{
+    alert("UPI ID: " + UPI_ID);
+  }
+
+}
+
+</script>
+
+</body>
+  </html>
