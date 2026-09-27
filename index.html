@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -19,15 +19,58 @@ body{
   color:#111827;
 }
 
+/* HEADER */
 header{
   background:#101827;
   color:white;
   text-align:center;
-  padding:25px 15px;
+  padding:22px 15px 25px;
+}
+
+/* ATTRACTIVE D LOGO */
+.logo{
+  width:78px;
+  height:78px;
+  margin:0 auto 12px;
+  border-radius:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+
+  background:
+    linear-gradient(145deg,#fff3a3,#d4a72c,#fff1a1,#a87508);
+
+  box-shadow:
+    0 0 12px rgba(255,215,80,.7),
+    0 0 30px rgba(255,190,40,.35),
+    inset 0 2px 5px rgba(255,255,255,.8);
+}
+
+.logo::before{
+  content:"";
+  position:absolute;
+  inset:5px;
+  border:2px solid rgba(255,255,255,.65);
+  border-radius:18px;
+}
+
+.logo span{
+  font-family:Georgia,serif;
+  font-size:58px;
+  font-weight:bold;
+  line-height:1;
+
+  color:#111827;
+
+  text-shadow:
+    2px 2px 0 #fff0a0,
+    0 0 8px rgba(255,255,255,.7);
 }
 
 header h1{
   font-size:30px;
+  letter-spacing:.5px;
 }
 
 header p{
@@ -35,22 +78,51 @@ header p{
   color:#cbd5e1;
 }
 
+/* HERO */
 .hero{
   background:linear-gradient(135deg,#101827,#26364d);
   color:white;
   text-align:center;
   padding:55px 20px;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:before{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  background:rgba(255,210,70,.08);
+  top:-90px;
+  right:-70px;
+}
+
+.hero:after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:rgba(255,210,70,.06);
+  bottom:-80px;
+  left:-60px;
 }
 
 .heart{
   font-size:55px;
   margin-bottom:15px;
+  position:relative;
+  z-index:2;
 }
 
 .hero h2{
   font-size:30px;
   line-height:1.35;
   margin-bottom:15px;
+  position:relative;
+  z-index:2;
 }
 
 .hero p{
@@ -58,8 +130,11 @@ header p{
   margin:auto;
   line-height:1.7;
   color:#e5e7eb;
+  position:relative;
+  z-index:2;
 }
 
+/* CONTENT */
 .container{
   max-width:700px;
   margin:30px auto;
@@ -84,6 +159,7 @@ header p{
   line-height:1.7;
 }
 
+/* HELP AREAS */
 .causes{
   display:grid;
   grid-template-columns:1fr 1fr;
@@ -95,15 +171,28 @@ header p{
   padding:18px 10px;
   border-radius:13px;
   text-align:center;
+  transition:.2s;
+}
+
+.cause:hover{
+  transform:translateY(-3px);
 }
 
 .cause strong{
   display:block;
   margin-top:7px;
+  margin-bottom:5px;
 }
 
+.cause span{
+  color:#64748b;
+  font-size:14px;
+}
+
+/* DONATION */
 .donate{
   text-align:center;
+  border:1px solid #e5e7eb;
 }
 
 .upi{
@@ -128,11 +217,20 @@ header p{
   padding:16px;
   border:0;
   border-radius:14px;
-  background:#16a34a;
+
+  background:linear-gradient(135deg,#16a34a,#15803d);
+
   color:white;
   font-size:20px;
   font-weight:bold;
   cursor:pointer;
+
+  box-shadow:0 6px 15px rgba(22,163,74,.25);
+  transition:.2s;
+}
+
+.amount:hover{
+  transform:translateY(-2px);
 }
 
 .amount:active{
@@ -150,6 +248,7 @@ header p{
   cursor:pointer;
 }
 
+/* FOOTER */
 footer{
   background:#101827;
   color:#cbd5e1;
@@ -158,7 +257,22 @@ footer{
   line-height:1.7;
 }
 
+footer strong{
+  color:#fff;
+}
+
+/* MOBILE */
 @media(max-width:500px){
+
+  .logo{
+    width:72px;
+    height:72px;
+  }
+
+  .logo span{
+    font-size:53px;
+  }
+
   .hero h2{
     font-size:26px;
   }
@@ -166,17 +280,31 @@ footer{
   .causes{
     grid-template-columns:1fr;
   }
+
+  .amount{
+    width:120px;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
 <header>
+
+  <div class="logo">
+    <span>D</span>
+  </div>
+
   <h1>Donait Help End</h1>
+
   <p>Help • Hope • Humanity</p>
+
 </header>
 
+
+<!-- HERO -->
 <section class="hero">
 
   <div class="heart">❤️</div>
@@ -193,108 +321,119 @@ footer{
 
 </section>
 
+
+<!-- MAIN -->
 <main class="container">
 
-<section class="card">
 
-  <h3>🤝 Hamara Purpose</h3>
+  <!-- PURPOSE -->
+  <section class="card">
 
-  <p>
-    Donait Help End ka purpose zaruratmand logon ke liye
-    food, education, medical assistance aur basic
-    necessities jaise areas mein support provide karne
-    ki koshish karna hai.
-  </p>
+    <h3>🤝 Hamara Purpose</h3>
 
-</section>
+    <p>
+      Donait Help End ka purpose zaruratmand logon ke liye
+      food, education, medical assistance aur basic
+      necessities jaise areas mein support provide karne
+      ki koshish karna hai.
+    </p>
+
+  </section>
 
 
-<section class="card">
+  <!-- HELP AREAS -->
+  <section class="card">
 
-  <h3>❤️ Help Areas</h3>
+    <h3>❤️ Help Areas</h3>
 
-  <div class="causes">
+    <div class="causes">
 
-    <div class="cause">
-      🍚
-      <strong>Food Support</strong>
-      <span>Food aur ration assistance</span>
+      <div class="cause">
+        🍚
+        <strong>Food Support</strong>
+        <span>Food aur ration assistance</span>
+      </div>
+
+      <div class="cause">
+        📚
+        <strong>Education</strong>
+        <span>Books aur learning support</span>
+      </div>
+
+      <div class="cause">
+        🏥
+        <strong>Medical Help</strong>
+        <span>Medical assistance</span>
+      </div>
+
+      <div class="cause">
+        🧥
+        <strong>Basic Needs</strong>
+        <span>Essential items support</span>
+      </div>
+
     </div>
 
-    <div class="cause">
-      📚
-      <strong>Education</strong>
-      <span>Books aur learning support</span>
+  </section>
+
+
+  <!-- DONATION -->
+  <section class="card donate">
+
+    <h3>💝 Donate via UPI</h3>
+
+    <p>
+      ₹50 ya ₹100 mein se koi amount choose karein.
+      Button par tap karte hi UPI payment open hoga.
+    </p>
+
+    <div class="upi">
+      jhaa50183-1@okaxis
     </div>
 
-    <div class="cause">
-      🏥
-      <strong>Medical Help</strong>
-      <span>Medical assistance</span>
+
+    <div class="amounts">
+
+      <button class="amount" onclick="pay(50)">
+        ₹50
+      </button>
+
+      <button class="amount" onclick="pay(100)">
+        ₹100
+      </button>
+
     </div>
 
-    <div class="cause">
-      🧥
-      <strong>Basic Needs</strong>
-      <span>Essential items support</span>
-    </div>
 
-  </div>
-
-</section>
-
-
-<section class="card donate">
-
-  <h3>💝 Donate via UPI</h3>
-
-  <p>
-    ₹50 ya ₹100 mein se koi amount choose karein.
-    Button par tap karte hi UPI payment open hoga.
-  </p>
-
-  <div class="upi">
-    jhaa50183-1@okaxis
-  </div>
-
-  <div class="amounts">
-
-    <button class="amount" onclick="pay(50)">
-      ₹50
+    <button class="copy" onclick="copyUPI()">
+      📋 Copy UPI ID
     </button>
 
-    <button class="amount" onclick="pay(100)">
-      ₹100
-    </button>
 
-  </div>
+    <p style="font-size:13px;margin-top:15px;color:#6b7280;">
+      Payment karne se pehle UPI recipient details verify karein.
+    </p>
 
-  <button class="copy" onclick="copyUPI()">
-    📋 Copy UPI ID
-  </button>
-
-  <p style="font-size:13px;margin-top:15px;color:#6b7280;">
-    Payment karne se pehle UPI recipient details verify karein.
-  </p>
-
-</section>
+  </section>
 
 
-<section class="card">
+  <!-- THANK YOU -->
+  <section class="card">
 
-  <h3>🙏 Thank You</h3>
+    <h3>🙏 Thank You</h3>
 
-  <p>
-    Aapka contribution kisi zaruratmand vyakti ki madad
-    ke efforts ka hissa ban sakta hai. Aap apni capacity
-    ke according hi donate karein.
-  </p>
+    <p>
+      Aapka contribution kisi zaruratmand vyakti ki madad
+      ke efforts ka hissa ban sakta hai. Aap apni capacity
+      ke according hi donate karein.
+    </p>
 
-</section>
+  </section>
 
 </main>
 
 
+<!-- FOOTER -->
 <footer>
 
   <strong>Donait Help End</strong>
@@ -315,6 +454,7 @@ footer{
 const UPI_ID = "jhaa50183-1@okaxis";
 const NAME = "Donait Help End";
 
+
 function pay(amount){
 
   const upiLink =
@@ -325,22 +465,32 @@ function pay(amount){
     "&cu=INR";
 
   window.location.href = upiLink;
+
 }
+
 
 function copyUPI(){
 
   if(navigator.clipboard){
 
     navigator.clipboard.writeText(UPI_ID)
+
     .then(function(){
+
       alert("UPI ID copied!");
+
     })
+
     .catch(function(){
+
       alert("UPI ID: " + UPI_ID);
+
     });
 
   }else{
+
     alert("UPI ID: " + UPI_ID);
+
   }
 
 }
@@ -348,4 +498,4 @@ function copyUPI(){
 </script>
 
 </body>
-  </html>
+    </html>
